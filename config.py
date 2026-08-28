@@ -26,12 +26,4 @@ JOB_MIN_APPLICATIONS = 1
 # Store as GitHub Actions secret: ai_api_key
 LLM_MODEL_TYPE = 'groq'
 LLM_MODEL = 'mixtral-8x7b-32768'  # Fast, free model (recommended)
-# Alternative models:
-# LLM_MODEL = 'llama-3-70b-8192'  # More powerful but slightly slower
-# LLM_MODEL = 'llama-2-70b-4096'  # Stable alternative
 LLM_API_URL = 'https://api.groq.com/openai/v1'
-
-# API Key is loaded from:
-# 1. GitHub Actions secret (ai_api_key) - Production
-# 2. data_folder/secrets.yaml - Local development
-# The main.py script will handle loading from secrets.yaml

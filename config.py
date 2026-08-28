@@ -1,6 +1,7 @@
 # In this file, you can set the configurations of the app.
 
 from src.utils.constants import DEBUG, ERROR, LLM_MODEL, OPENAI
+import os
 
 #config related to logging must have prefix LOG_
 LOG_LEVEL = 'INFO'
@@ -19,7 +20,18 @@ JOB_SUITABILITY_SCORE = 7
 JOB_MAX_APPLICATIONS = 5
 JOB_MIN_APPLICATIONS = 1
 
-LLM_MODEL_TYPE = 'openai'
-LLM_MODEL = 'gpt-4o-mini'
-# Only required for OLLAMA models
-LLM_API_URL = ''
+# ===== Groq Configuration =====
+# Groq provides FREE API access with very fast inference
+# Get your key from: https://console.groq.com/api-keys
+# Store as GitHub Actions secret: ai_api_key
+LLM_MODEL_TYPE = 'groq'
+LLM_MODEL = 'mixtral-8x7b-32768'  # Fast, free model (recommended)
+# Alternative models:
+# LLM_MODEL = 'llama-3-70b-8192'  # More powerful but slightly slower
+# LLM_MODEL = 'llama-2-70b-4096'  # Stable alternative
+LLM_API_URL = 'https://api.groq.com/openai/v1'
+
+# API Key is loaded from:
+# 1. GitHub Actions secret (ai_api_key) - Production
+# 2. data_folder/secrets.yaml - Local development
+# The main.py script will handle loading from secrets.yaml

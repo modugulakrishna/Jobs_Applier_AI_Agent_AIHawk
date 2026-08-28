@@ -1,47 +1,67 @@
-remote: true
-hybrid: true
-onsite: true
+# Work Preferences for M.K. Mohan - Senior GCP DevOps Engineer
+# Configuration for automatic job search and application
+
+remote: true               # Remote jobs ONLY (your priority)
+hybrid: false              # Disable hybrid
+onsite: false              # Disable on-site
 
 experience_level:
   internship: false
-  entry: true
-  associate: true
-  mid_senior_level: true
-  director: false
+  entry: false
+  associate: false
+  mid_senior_level: true   # Senior Level
+  director: true           # Director Level
   executive: false
 
 job_types:
-  full_time: true
+  full_time: true          # Full-time positions only
   contract: false
   part_time: false
-  temporary: true
+  temporary: false
   internship: false
   other: false
-  volunteer: true
+  volunteer: false
 
-date:
+date:                      # Jobs posted recently (focus on active hiring)
   all_time: false
-  month: false
+  month: true              # Last 30 days
   week: false
-  24_hours: true
+  24_hours: false
 
-positions:
-  - Software engineer
+positions:                 # DevOps & Cloud Engineering roles
+  - "Senior GCP DevOps Engineer"
+  - "Senior Cloud DevOps Engineer"
+  - "Senior Platform Engineer"
+  - "Senior Site Reliability Engineer"
+  - "SRE"
+  - "Senior Infrastructure Engineer"
+  - "Cloud Infrastructure Engineer"
+  - "Senior Kubernetes Engineer"
+  - "Cloud Architect"
+  - "DevOps Lead"
+  - "Platform Lead"
 
 locations:
-  - Germany
+  - "Hyderabad"            # Preferred location
+  - "India"                # Backup: Any India-based remote
 
-apply_once_at_company: true
+apply_once_at_company: true  # Apply only once per company
 
-distance: 100
+distance: 0                # Exact location match (0 = exact, 5/10/25/50/100 for distance in km)
 
-company_blacklist:
-  - wayfair
-  - Crossover
+company_blacklist:         # Companies to avoid
+  - []
 
-title_blacklist:
-  - word1
-  - word2
+title_blacklist:           # Job titles to avoid
+  - "Junior"
+  - "Intern"
+  - "Entry Level"
+  - "Graduate"
 
-location_blacklist:
-  - Brazil
+location_blacklist:        # Locations to exclude
+  - "USA"
+  - "United States"
+  - "Canada"
+  - "Europe"
+  - "London"
+  - "Singapore"
